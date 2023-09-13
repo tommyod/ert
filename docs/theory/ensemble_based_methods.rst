@@ -247,13 +247,14 @@ We introduce a multivariate normal prior distribution
 
 .. math::
 
-   f(x) = \mathcal{N}(x^f,C_{xx}),
+   f(x) = \mathcal{N}(x^f, C_{xx}),
 
-and assume that the data mismatch is normally distributed
+and assume that the mismatch :math:`e` has distribution :math:`\mathcal{N}(g(x), C_{dd})`.
+This means that the observations :math:`d` are distributed according to
 
 .. math::
 
-   f(d|g(x))=f(e)=\mathcal{N}(0,C_{dd}),
+   f(d|g(x)) = \mathcal{N}(g(x), C_{dd}),
 
 where :math:`x^f \in \Re^n` is the prior estimate of :math:`x` with covariance matrix
 :math:`C_{xx} \in \Re^{n \times n}`, and :math:`C_{dd} \in \Re^{m \times m}` is the
